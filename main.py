@@ -1,5 +1,5 @@
 import MailClient from MailClient
-import Mailserver from MailServer
+import MailServer from MailServer
 
 class MailItem:
     def __init__(self, sender, receiver, msg):
