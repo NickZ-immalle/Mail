@@ -1,4 +1,5 @@
 import main form main
+import MailItem from MailItem
 
 class MailServer:
     def __init__(self):
