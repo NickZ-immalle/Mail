@@ -1,18 +1,23 @@
-import MailClient from MailClient
-import MailServer from MailServer
+from MailServer import MailServer
+from MailItem import MailItem
+from MailClient import MailClient
 
-class MailItem:
-    def __init__(self, sender, receiver, msg):
-        self.sender = sender
-        self.receiver = receiver
-        self.msg = msg
+if __name__ == '__main__':
+    s = MailServer()
     
-    def print(self):
-        print("From: " + self.sender)
-        print("To: " + self.receiver)
-        print("Message: " + self.msg)
+    print(" Logging in Joske to mail server...")
+    c1 = MailClient(s, "Joske")
 
+    print(" User joske sending mail to Jantje...")
+    c1.sendMailItem("Jantje", "Hello!!!")
 
+    print(" Logging in Jantje to mail server...")
+    c2 = MailClient(s, "Jantje")
 
+    print(" User Jantje reading mail...")
+    c2.printNextMailItem()
+
+    print(" User Jantje reading mail...")
+    c2.printNextMailItem()
 
 
