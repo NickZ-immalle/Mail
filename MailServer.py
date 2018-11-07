@@ -1,3 +1,5 @@
+import main form main
+
 class MailServer:
     def __init__(self):
         self.items = []
